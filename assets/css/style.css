@@ -1,0 +1,520 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html{
+    /* hành vi khi cuộn */
+    scroll-behavior: smooth;
+    font-family:  Helvetica, Arial, sans-serif;
+}
+.clear{
+    clear: both;
+    /* giải quyết vấn đề của float */
+}
+
+.italic{
+    font-style: italic;
+}
+.text-white{
+    color: #fff !important;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.column{
+    float: left;
+    padding: 0 8px;
+}
+
+.column-third{
+    width: calc(100%/3);
+}
+
+.column-half{
+    width: 50%;
+}
+
+.column-full{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    border-style: none;
+}
+
+.btn:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Main */
+
+
+/* Header + Navigation */
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0; /* 1 vài trình duyệt sẽ không auto bằng 0*/
+    left: 0;
+    right: 0; /* cho chắc */
+    height: 46px;
+    background-color: #000;
+    z-index: 1; /* để cho header nổi lên trên  slider */
+}
+
+#header #nav{
+    display: inline-block;
+}
+
+#header #nav > li{
+    position: relative;
+    display: inline-block;
+}
+
+#header #nav li{
+    list-style-type: none;
+    margin: 0 -2px;
+}
+
+#header #nav > li > a{
+    text-transform: uppercase;
+    padding: 0 -2px;
+}
+
+#header #nav li a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+}
+
+#header #nav li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+
+#header #nav .subnav{
+    position: absolute;
+    display: none;
+    left: 2px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.3);
+}
+
+#header #nav .subnav a{
+    background-color: #fff;
+    color: #000;
+    line-height: 36px;
+    padding: 0 12px;
+    min-width: 160px;
+}
+
+#header #nav li:hover .subnav{
+    display: block;
+}
+
+#header #nav .nav-arrow-down{
+    font-size: 10px;
+}
+
+#header .search-button{
+    float: right;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 24px;
+    font-size: 15px;
+    cursor: wait;
+}
+
+#header .search-button:hover{
+    background-color: #f44336;
+}
+
+/* Slider */
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider2.jpg') top center / cover no-repeat;
+    overflow: hidden;
+}
+
+#slider::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; 
+    background: linear-gradient(to top, rgba(0, 0, 0), transparent);
+  }
+
+#slider .text-content{
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#slider .text-heading{
+    font-weight: 600;
+    font-size: 36px;
+}
+
+#slider .text-description{
+    padding: 8px 0;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Content */
+
+/* About */
+#content{
+
+}
+
+#content .content-section{
+    padding: 64px 16px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading{
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#content .section-sub-heading{
+    margin: 15px 0;
+    font-size: 15px;
+    color: #676767;
+    font-style: italic;
+}
+
+#content .about-text{
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+#content img{
+    padding-top: 20px;
+    width: 100%;
+}
+#content > #band > .row p{
+    padding: 10px 6px;
+    font-size: 14px;
+    
+} 
+
+#content p{
+    padding: 6px;
+}
+
+#content .members-list{
+    padding: 32px 0;
+    overflow: hidden;
+}
+
+#content .member-name{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .member-img{
+    width: 60%;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+/* tour section */
+#content .tour-section{
+    background-color: #000;
+}
+
+.tour-section .ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+.ticket-list li{
+    padding: 11px 16px;
+    color: rgb(117,117,117);
+    font-size: 15px;
+    border-bottom-style: solid;
+    border-color: rgb(221,221,221);
+    border-bottom-width: 1px;
+    text-align: left;
+}
+
+.ticket-list .sold-out{
+    margin-left: 16px;
+    padding: 2px 8px;
+    font-size: 15px;
+    background: rgb(244,67,54);
+    color: #fff;
+}
+
+
+/* Place */
+
+.tour-section .place-list{
+    padding: 32px 0; 
+    overflow: hidden;
+}
+
+
+.place-list .place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-list .place-img:hover{
+    opacity: 0.6;
+}
+
+.place-list .place-body{
+    background-color: #fff;
+    padding: 16px 16px;
+    min-height: 350px;
+}
+
+.place-body{
+    position: relative;
+}
+
+.place-body .place-heading{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.place-body .place-time{
+    margin: 15px 0;
+    font-size: 15px;
+    opacity: 0.6; /* độ mờ */
+
+}
+
+.place-body .place-desc{
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.place-body .btn{
+    position: absolute;
+    bottom: 20px;
+}
+
+/* Contact */
+
+.contact-content{
+    padding: 32px 0;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .row > .column-full{
+    margin-top: 8px;
+}
+
+.contact-form .btn{
+    margin: 16px 0;
+    float: right;    
+}
+
+/*  */
+
+/* Footer */
+#footer{
+
+}
+
+.footer-img{
+    /* add filter */
+    filter: grayscale(0.5);
+    width: 100%;
+}
+
+.socials{
+    padding: 64px 16px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.socials i[class*="ti"]{
+    font-size: 24px;
+}
+
+.socials i[class*="ti"]:hover{
+    opacity: 0.5;
+}
+
+.socials .content{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+/* Modal */
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open{
+    display: flex;
+}
+
+/* Modal container */
+.modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 64px);
+    animation: modalFadeIn ease 0.5s;
+}
+
+/*Modal Header */
+
+.modal-container .modal-header{
+    position: relative;
+    background-color: #009688;
+    color: #fff;
+    padding: 47px 16px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+/* Modal-close */
+
+.modal-container .modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.modal-container .modal-close:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Modal body */
+
+.modal-body{
+    padding: 16px;
+    font-size: 15px;
+}
+
+.modal-body .modal-label{
+    display: block;
+}
+
+.modal-body .modal-input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: #ccc solid 1px;
+    margin-bottom: 16px;
+}
+
+#buy-tickets{
+    margin-bottom: 16px;
+    padding: 16px;
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    font-weight: 500;
+    border-style: none;
+}
+
+#buy-tickets:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Modal Footer */
+
+.modal-footer{
+    margin: 0 16px 32px 16px;
+    display: flex;
+    justify-content: right;
+}
+
+/* Tạo chuyển động khi bật Modal */
+@keyframes modalFadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
