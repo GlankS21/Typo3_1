@@ -312,8 +312,7 @@ html{
 .place-body .place-time{
     margin: 15px 0;
     font-size: 17px;
-    opacity: 0.6; /* độ mờ */
-
+    opacity: 0.6;
 }
 
 .place-body .place-desc{
