@@ -51,6 +51,10 @@ html{
     width: 60%;
 }
 
+.column-full{
+    width: 100%;
+}
+
 .text-center{
     text-align: center !important;
 }
