@@ -309,12 +309,13 @@ html{
 
 .place-body .place-heading{
     font-size: 20px;
+    padding-top: 10px;
     padding-left: 6px;
     font-weight: 700;
 }
 
 .place-body .place-time{
-    margin: 15px 0 0 0;
+    margin: 10px 0 0 0;
     font-size: 17px;
     opacity: 0.6;
 }
